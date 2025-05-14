@@ -17,7 +17,7 @@ export default function ClaimTimer() {
     const hasFinished = useRef(false);
     const [tickets, setTickets] = useState(0);
     const [week, setWeek] = useState(0);
-    
+
 
     useEffect(() => {
         // localStorage에서 시작 시간 불러오기
@@ -139,10 +139,57 @@ export default function ClaimTimer() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
             >
-                <div className="w-full h-[20%] flex justify-center items-center relative ">
+                <div className="  w-[90%] h-[6%] flex flex-col gap-[5%] justify-evenly items-center relative ">
+                    <a href="https://x.com/CRTProject_X" target="_blank" rel="noopener noreferrer" className="bg-white rounded-[30px] flex justify-between items-center w-full h-full px-4">
+                        <div className="w-[8vmin] sm:w-[5vmin] aspect-[60/60] relative  ">
+                            <Image
+                                src="/image/crt_x_icon.png"
+                                alt="main logo"
+                                layout="fill"
+                                objectFit="cover"
+                            />
+                        </div>
+                        <p className="text-black text-[4vmin] sm:text-[2vmin]">Join our X , earn SAGU Point</p>
+                        <p className="text-black h-full opacity-60 text-center">...</p>
+                    </a>
+                </div>
+                <div className=" w-[90%] h-[15%] flex justify-between ">
+                    <div className=" py-2 bg-mainBoxBg rounded-[23px] w-[47%] flex flex-col justify-center items-center relative">
+                        <div className=" w-full flex justify-center gap-[10%]">
+                            <div className="w-[9vmin] sm:w-[6vmin] aspect-[65/65] relative  ">
+                                <Image
+                                    src="/image/crt_game.svg"
+                                    alt="main logo"
+                                    layout="fill"
+                                    objectFit="cover"
+                                />
+                            </div>
+                            <p className={` text-white text-[5vmin] sm:text-[3vmin] font-bold
+               mt-1 `}>{n2o >= 1000000 ? `${n2o / 1000000}m` : n2o >= 1000 ? `${n2o / 1000}k` : n2o}</p>
+                        </div>
+                        <p className=" w-full py-[2%] mt-[4%] text-center text-white text-[3.8vmin] xs:text-[4.5vmin] sm:text-[2.3vmin]
+                        active:scale-90 transition-transform duration-200">Your CTR Point</p>
+                    </div>
+                    <div className=" py-2 bg-mainBoxBg rounded-[23px] w-[47%] flex flex-col justify-center items-center relative">
+                        <div className=" w-full flex justify-center gap-[10%]">
+                            <div className="w-[9vmin] sm:w-[6vmin] aspect-[72/72] relative  ">
+                                <Image
+                                    src="/image/crt_pencil.png"
+                                    alt="main logo"
+                                    layout="fill"
+                                    objectFit="cover"
+                                />
+                            </div>
+                            <p className={` text-white text-[5vmin] sm:text-[3vmin] font-bold `}>{tickets}</p>
+                        </div>
+                        <p className=" w-full py-[2%] mt-[4%] text-center text-white text-[3.8vmin] xs:text-[4.5vmin] sm:text-[2.3vmin]
+                        active:scale-90 transition-transform duration-200">Your AI Pencils</p>
+                    </div>
+                </div>
+                <div className="w-full h-[15%] flex justify-center items-center relative ">
                     <div className="w-[90%] py-[5%] h-full sm:w-[90%] relative flex flex-col justify-between items-center rounded-[23px] bg-mainBoxBg">
                         <div className="w-full flex justify-center gap-[10%] items-center  ">
-                            <p className="  text-[#E1FF41] text-[4.5vmin] sm:text-[2.5vmin] font-bold">Earn SAGU</p>
+                            <p className="  text-[#E55E00] text-[4.5vmin] sm:text-[2.5vmin] font-bold">Earn CRT</p>
                             <p className=" text-[#808080] text-[4.5vmin] sm:text-[2.5vmin] font-bold ">{formatTime(time)}</p>
                         </div>
                         <p className="text-white opacity-50 text-center text-[3vmin] sm:text-[1.5vmin]">AI is currently evaluating your response.</p>
@@ -154,90 +201,56 @@ export default function ClaimTimer() {
                         </div>
                     </div>
                 </div>
-                <div className="w-full h-[45%] py-[2%] flex justify-center items-center relative">
-                    <div className={` bg-[#41A4FF] h-full w-[90%] px-[3%] py-[2%] rounded-[23px] flex flex-col gap-[2%] justify-between`}>
+                <div className="w-full h-[55%]  flex justify-center items-center relative ">
+                    <div className={` h-full w-full py-[2%] rounded-[23px] flex flex-col gap-[2%] justify-between`}>
                         <div className="w-full px-[3%] rounded-[23px] flex items-center relative ">
-                            <div className=" w-full flex justify-between z-10 ">
-                                <div className="flex flex-col ">
+                            <div className=" w-full flex flex-col justify-center items-center z-10 ">
+                                <div className="w-[15vmin] sm:w-[6vmin] aspect-[1/1] relative  ">
+                                    <Image
+                                        src="/image/crt_game.svg"
+                                        alt="main logo"
+                                        layout="fill"
+                                        objectFit="cover"
+                                    />
+                                </div>
+                                <div className="flex flex-col justify-center items-center ">
                                     <div className=" flex justify-around">
-                                        <p className="w-full text-[6vmin] sm:text-[2vmin] font-normal text-black ">This Week Question</p>
+                                        <p className="w-full text-[6vmin] sm:text-[2vmin] font-bold text-white ">Story Prompt</p>
                                     </div>
                                     <div className="flex justify-between items-center">
-                                        <p className={` text-black text-[3vmin] sm:text-[1.2vmin] `}>Verified Knowledge.<br />Real Rewards.</p>
+                                        <p className={` text-white text-[3vmin] sm:text-[1.2vmin] `}>Imagination becomes reality. Rewards follow creativity.</p>
                                     </div>
                                 </div>
-                                <div className="w-[18vmin] sm:w-[6vmin] aspect-[114/129] relative  ">
+                            </div>
+                        </div>
+                        <div className="w-full h-[50%] bg-[#00000050] px-[3%] py-2 flex flex-col justify-evenly gap-[5%] items-center relative ">
+                            <div className="w-full flex justify-between ">
+                                <div className=" px-3 rounded-3xl text-center py-1 text-white text-[3vmin] border-white border-2">Sci-Fi Movie Intro</div>
+                                <div className="w-[35%] aspect-[143/33] relative  ">
                                     <Image
-                                        src="/image/sagu_main_icon.png"
+                                        src="/image/crt_ai_icon.png"
                                         alt="main logo"
                                         layout="fill"
                                         objectFit="cover"
                                     />
                                 </div>
                             </div>
-                            <div className="absolute top-0 right-[5%] w-[60%] aspect-[2/1] bg-gradient-to-b from-[#E1FF41] to-white opacity-60 rounded-[80%] blur-2xl filter"></div>
+                            {/* <p className="w-full text-black text-[3.5vmin] sm:text-[2vmin]">{questionDb[week].question}</p> */}
+                            <p className="w-full text-white text-[2.5vmin]">Year 2137. Humanity has learned to archive consciousness.  In the floating city of NOVA-9, memories are no longer private  they’re stored, traded, even stolen.  You are a “threadwalker”, one of the few capable of diving into fractured memory chains to recover the truth.  Your latest mission?  A missing engineer. A corrupted AI archive. A final recorded memory…  "He said if anyone sees this, it's already too late."  The file begins to play.</p>
                         </div>
-                        <div className="w-full h-[50%] bg-[#E1FF41] px-[3%] py-2 flex items-center relative ">
-                            <p className="w-full text-black text-[3.5vmin] sm:text-[2vmin]">{questionDb[week].question}</p>
-                        </div>
-                        <div className="w-full h-[15%] flex justify-center relative gap-[5%]  ">
-                            <Link href="/balance" className="w-[45%] rounded-[24px] py-2  flex flex-col justify-center items-center relative bg-[#E1FF41] active:scale-90 transition-transform duration-100">
-                                <p className=" text-black text-[3.5vmin] sm:text-[1.5vmin] z-10">Go to Answer</p>
+                        <p className="w-full px-[5%] text-center text-white text-[2.8vmin] font-semibold">Now you write what happens next. What does the memory reveal?<br/>What choice will you make inside the archive?</p>
+                        <div className="w-full h-[12%] flex justify-center relative gap-[5%]  ">
+                            <Link href="/balance" className="w-[45%] rounded-[24px] flex flex-col justify-center items-center relative bg-[#E55E00] active:scale-90 transition-transform duration-100">
+                                <p className=" text-black text-[3.5vmin] sm:text-[1.5vmin] z-10">Make Story</p>
                             </Link>
-                            <Link href="/daily" className="w-[45%] rounded-[24px] py-2 flex flex-col justify-center items-center relative bg-[#FF9041] active:scale-90 transition-transform duration-100">
-                                <p className=" text-black text-[3.5vmin] sm:text-[1.5vmin]">Get Tickets</p>
+                            <Link href="/daily" className="w-[45%] rounded-[24px] flex flex-col justify-center items-center relative bg-[#4C9DE7] active:scale-90 transition-transform duration-100">
+                                <p className=" text-black text-[3.5vmin] sm:text-[1.5vmin]">Get AI Pencil</p>
                             </Link>
                         </div>
                     </div>
                 </div>
-                <div className=" w-[90%] h-[15%] flex justify-between  ">
-                    <div className=" py-2 bg-mainBoxBg rounded-[23px] w-[47%] flex flex-col justify-center items-center relative">
-                        <div className=" w-full flex justify-center gap-[10%]">
-                            <div className="w-[8vmin] sm:w-[6vmin] aspect-[98/101] relative  ">
-                                <Image
-                                    src="/image/sagu_game.png"
-                                    alt="main logo"
-                                    layout="fill"
-                                    objectFit="cover"
-                                />
-                            </div>
-                            <p className={` text-white text-[5vmin] sm:text-[3vmin] font-bold
-               mt-1 `}>{n2o >= 1000000 ? `${n2o / 1000000}m` : n2o >= 1000 ? `${n2o / 1000}k` : n2o}</p>
-                        </div>
-                        <p className=" w-full py-[2%] mt-[4%] text-center text-white text-[3.8vmin] xs:text-[4.5vmin] sm:text-[2.3vmin]
-                        active:scale-90 transition-transform duration-200">Your SAGU Point</p>
-                    </div>
-                    <div className=" py-2 bg-mainBoxBg rounded-[23px] w-[47%] flex flex-col justify-center items-center relative">
-                        <div className=" w-full flex justify-center gap-[10%]">
-                            <div className="w-[8vmin] sm:w-[6vmin] aspect-[72/74] relative  ">
-                                <Image
-                                    src="/image/sagu_ticket_icon.png"
-                                    alt="main logo"
-                                    layout="fill"
-                                    objectFit="cover"
-                                />
-                            </div>
-                            <p className={` text-white text-[5vmin] sm:text-[3vmin] font-bold `}>{tickets}</p>
-                        </div>
-                        <p className=" w-full py-[2%] mt-[4%] text-center text-white text-[3.8vmin] xs:text-[4.5vmin] sm:text-[2.3vmin]
-                        active:scale-90 transition-transform duration-200">Your Tickets</p>
-                    </div>
-                </div>
-                <div className="  w-[90%] h-[13%] flex flex-col gap-[5%] justify-evenly items-center relative">
-                    <div className="w-full text-white text-[4vmin] sm:text-[2vmin]">Join Our community</div>
-                    <a href="https://x.com/SAGE_officialX" target="_blank" rel="noopener noreferrer" className="bg-white rounded-[30px] flex justify-between items-center w-full py-[1%] px-4">
-                        <div className="w-[8vmin] sm:w-[5vmin] aspect-[60/60] relative  ">
-                            <Image
-                                src="/image/sagu_x_icon.png"
-                                alt="main logo"
-                                layout="fill"
-                                objectFit="cover"
-                            />
-                        </div>
-                        <p className="text-black text-[4vmin] sm:text-[2vmin]">Join our X , earn SAGU Point</p>
-                        <p className="text-black h-full opacity-60">...</p>
-                    </a>
-                </div>
+
+
             </motion.div>
         </AnimatePresence>
     );

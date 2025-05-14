@@ -33,13 +33,14 @@ export default function Home() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="w-[90%] max-w-[500px] px-[3%] flex flex-col items-start relative ">
-              <div className=" w-full flex flex-col">
-                <p className="text-white text-[3.5vmin] sm:text-[2.5vmin] xs:text-[4.5vmin]">Welcome</p>
+            <div className="w-full max-w-[500px] px-[3%] py-[3%] flex justify-between items-end relative bg-[#E55E00] ">
+              <div className=" flex flex-col  ">
+                <p className="text-white text-[4.5vmin] sm:text-[3.5vmin] xs:text-[4.5vmin]">Welcome</p>
+                <p className="text-white text-[4.5vmin] sm:text-[3.5vmin] xs:text-[4.5vmin] font-semibold">Create to Earn Project</p>
               </div>
-              <div className="w-[50vmin] sm:w-[40vmin] aspect-[306/59] relative">
+              <div className="w-[13vmin] sm:w-[40vmin] aspect-[297/125] relative mb-1 ">
                 <Image
-                  src="/image/sagu_logo.png"
+                  src="/image/crt_intro_logo.png"
                   alt="main logo"
                   layout="fill"
                   objectFit="cover"

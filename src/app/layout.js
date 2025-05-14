@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`bg-black flex min-h-dvh justify-center m-0 p-0 ${inter.className}`} >
-        <div className=" w-full h-screen max-w-[500px] max-h-[1080px] bg-multi-gradient relative flex flex-col justify-between overflow-scroll"
+        <div className=" w-full h-screen max-w-[500px] max-h-[1080px] bg-radial-custom relative flex flex-col justify-between overflow-scroll"
           >
             {children}
           <Analytics />

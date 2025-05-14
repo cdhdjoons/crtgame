@@ -28,6 +28,7 @@ export default {
       },
       backgroundImage: {
         'multi-gradient': 'linear-gradient(to bottom, rgba(245,193,80,0.5), rgba(222,133,161,0.5), rgba(126,104,231,0.5), rgba(126,143,244,0.5), rgba(87,178,251,0.5))',
+        'radial-custom': 'radial-gradient(circle, #57B2FB50, #7E8FF450, #7E68E750, #DE85A150, #F5BB5050)',
       }
     },
   },

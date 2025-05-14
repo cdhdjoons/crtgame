@@ -54,14 +54,14 @@ export default function Tickets() {
     return (
         <div className="w-full flex justify-center relative gap-[5%]  ">
             <div onClick={() => getTicket(1, 500)} className="w-[45%] rounded-[24px] py-1  flex flex-col justify-center items-center relative bg-[#FF9041] active:scale-90 transition-transform duration-100">
-                <p className=" text-black text-[3.5vmin] sm:text-[1.5vmin] z-10">1Ticket / 500 SAGU</p>
+                <p className=" text-black text-[3.5vmin] sm:text-[1.5vmin] z-10">1pencil / 500 CRT</p>
             </div>
             <div onClick={() => getTicket(5, 2000)} className="w-[45%] rounded-[24px] py-2 flex flex-col justify-center items-center relative bg-[#FF9041] active:scale-90 transition-transform duration-100">
-                <p className=" text-black text-[3.5vmin] sm:text-[1.5vmin]">5Ticket / 2K SAGU</p>
+                <p className=" text-black text-[3.5vmin] sm:text-[1.5vmin]">5pencils / 2K CRT</p>
             </div>
             {
                 pop && (
-                    <div className=" absolute w-[60%] top-[-550%] left-1/2 -translate-x-1/2 z-[999] "><Alert severity="error">Need more SAGU.</Alert></div>
+                    <div className=" absolute w-[60%] top-[-550%] left-1/2 -translate-x-1/2 z-[999] "><Alert severity="error">Need more CRT.</Alert></div>
                 )
             }
             

@@ -37,17 +37,17 @@ export default function Footer() {
 
     return (
         <AnimatePresence mode="wait">
-            <motion.div className="  w-full max-w-[500px] flex justify-center items-center px-[2%] "
+            <motion.div className="  w-full max-w-[500px] flex justify-center items-center  "
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
             >
-                <div className=" w-full py-[2vmin] rounded-[40px] sm:pt-[1vmin] sm:pb-[2.3vmin] flex justify-evenly items-center bg-footerBg">
-                    <Link href="/" onClick={() => changeMenuColor(0)} className={`${menuColor === 0 ? 'bg-[#CCE73C]' : 'bg-footerIconBg'}  w-[13%] aspect-[1/1] rounded-full flex justify-center items-center`}>
-                        <div className=" w-[7vmin] sm:w-[3vmin] aspect-[36/36] relative active:scale-90 transition-transform duration-200 ">
+                <div className=" w-full py-[2vmin] sm:pt-[1vmin] sm:pb-[2.3vmin] flex justify-evenly items-center bg-gradient-to-b from-[#7CD7FA00] to-[#007FF480]">
+                    <Link href="/" onClick={() => changeMenuColor(0)} className={`${menuColor === 0 ? 'bg-[#E55E00]' : 'bg-footerIconBg'}  w-[13%] aspect-[1/1] rounded-full flex justify-center items-center`}>
+                        <div className=" w-[6vmin] sm:w-[2vmin] aspect-[16/17] relative active:scale-90 transition-transform duration-200 ">
                             <Image
-                                src="/image/sagu_home.png"
+                                src="/image/crt_home.svg"
                                 alt="meatIcon"
                                 fill
                                 style={{ objectFit: "cover" }}
@@ -55,10 +55,10 @@ export default function Footer() {
                             />
                         </div>
                     </Link>
-                    <Link href="/daily" onClick={() => changeMenuColor(1)} className={`${menuColor === 1 ? 'bg-[#CCE73C]' : 'bg-footerIconBg'}  w-[13%] aspect-[1/1] rounded-full flex justify-center items-center`}>
-                        <div className="w-[7vmin] sm:w-[3vmin] aspect-[36/36] relative active:scale-90 transition-transform duration-200">
+                    <Link href="/daily" onClick={() => changeMenuColor(1)} className={`${menuColor === 1 ? 'bg-[#E55E00]' : 'bg-footerIconBg'}  w-[13%] aspect-[1/1] rounded-full flex justify-center items-center`}>
+                        <div className="w-[6vmin] sm:w-[2vmin] aspect-[20/20] relative active:scale-90 transition-transform duration-200">
                             <Image
-                                src="/image/sagu_task.png"
+                                src="/image/crt_task.svg"
                                 alt="meatIcon"
                                 fill
                                 style={{ objectFit: "cover" }}
@@ -68,9 +68,9 @@ export default function Footer() {
                         </div>
                     </Link>
                     <Link href="/balance">
-                        <div className="w-[15vmin] sm:w-[8vmin] aspect-[98/101] relative active:scale-90 transition-transform duration-200">
+                        <div className="w-[15vmin] sm:w-[8vmin] aspect-[65/65] relative active:scale-90 transition-transform duration-200">
                             <Image
-                                src="/image/sagu_game.png"
+                                src="/image/crt_game.svg"
                                 alt="meatIcon"
                                 fill
                                 style={{ objectFit: "cover" }}
@@ -79,10 +79,10 @@ export default function Footer() {
                             />
                         </div>
                     </Link>
-                    <Link href="/invite" onClick={() => changeMenuColor(2)} className={`${menuColor === 2 ? 'bg-[#CCE73C]' : 'bg-footerIconBg'}  w-[13%] aspect-[1/1] rounded-full flex justify-center items-center`}>
-                        <div className="w-[7vmin] sm:w-[3vmin] aspect-[36/36] relative active:scale-90 transition-transform duration-200">
+                    <Link href="/invite" onClick={() => changeMenuColor(2)} className={`${menuColor === 2 ? 'bg-[#E55E00]' : 'bg-footerIconBg'}  w-[13%] aspect-[1/1] rounded-full flex justify-center items-center`}>
+                        <div className="w-[6vmin] sm:w-[2vmin] aspect-[22/22] relative active:scale-90 transition-transform duration-200">
                             <Image
-                                src="/image/sagu_invite.png"
+                                src="/image/crt_invite.svg"
                                 alt="meatIcon"
                                 fill
                                 style={{ objectFit: "cover" }}
@@ -91,10 +91,10 @@ export default function Footer() {
                             />
                         </div>
                     </Link>
-                    <Link href="/leaderboard" onClick={() => changeMenuColor(3)} className={`${menuColor === 3 ? 'bg-[#CCE73C]' : 'bg-footerIconBg'}  w-[13%] aspect-[1/1] rounded-full flex justify-center items-center`}>
-                        <div className="w-[7vmin] sm:w-[3vmin] aspect-[36/36] relative active:scale-90 transition-transform duration-200">
+                    <Link href="/leaderboard" onClick={() => changeMenuColor(3)} className={`${menuColor === 3 ? 'bg-[#E55E00]' : 'bg-footerIconBg'}  w-[13%] aspect-[1/1] rounded-full flex justify-center items-center`}>
+                        <div className="w-[6vmin] sm:w-[2vmin] aspect-[22/22] relative active:scale-90 transition-transform duration-200">
                             <Image
-                                src="/image/sagu_rank.png"
+                                src="/image/crt_rank.svg"
                                 alt="meatIcon"
                                 fill
                                 style={{ objectFit: "cover" }}
