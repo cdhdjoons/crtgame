@@ -59,98 +59,103 @@ export default function LeaderBoard() {
 
     return (
         <AnimatePresence mode="wait">
-            <motion.div className=" w-full h-full "
+            <motion.div className=" w-full h-full overflow-hidden "
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 1 }}
             >
-                <div className=" w-full h-full max-w-[500px] relative flex flex-col justify-evenly items-center " >
-                    <div className="w-[90%] max-w-[500px] px-[3%] flex flex-col items-start  ">
-                        <div className=" w-full flex flex-col">
-                            <p className="text-white text-[3.5vmin] sm:text-[2.5vmin] xs:text-[4.5vmin]">Union center</p>
+                <div className=" w-full h-full max-w-[500px] relative flex flex-col justify-between items-center " >
+                    <div className="w-full max-w-[500px] px-[3%] py-2 flex justify-between items-end relative bg-[#E55E00] ">
+                        <div className=" flex flex-col  ">
+                            <p className="text-white text-[4.5vmin] sm:text-[3.5vmin] xs:text-[4.5vmin]">Latested Story</p>
+                            <p className="text-white text-[4.5vmin] sm:text-[3.5vmin] xs:text-[4.5vmin] font-semibold">Create to Earn Project</p>
                         </div>
-                        <div className="w-[50vmin] sm:w-[40vmin] aspect-[306/59] relative">
+                        <div className="w-[13vmin] sm:w-[40vmin] aspect-[297/125] relative mb-1 ">
                             <Image
-                                src="/image/sagu_logo.png"
+                                src="/image/crt_intro_logo.png"
                                 alt="main logo"
                                 layout="fill"
                                 objectFit="cover"
                             />
                         </div>
                     </div>
-                    <div className=" flex flex-col items-center ">
-                        <div className=" w-[25vmax] sm:w-[20vmax] aspect-[264/264] relative active:scale-90 transition-transform duration-200">
-                            <Image
-                                src="/image/pdb_rankcircle_border.png"
-                                alt="main logo"
-                                layout="fill"
-                                objectFit="fill"
-                                className="z-[90]"
-                            />
-                            <svg
-                                className="absolute left-[50%] top-[50%] p-[4%] -translate-y-[50%] -translate-x-[50%] w-[115%] transform rotate-90" // 6시 방향부터 시작하도록 회전
-                                viewBox="0 0 100 100"
-                            >
-                                <defs>
-                                    <linearGradient id="gradientColors" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" stopColor="#F5C150" />
-                                        <stop offset="50%" stopColor="#7E68E7" />
-                                        <stop offset="100%" stopColor="#57B2FB" />
-                                    </linearGradient>
-                                </defs>
-                                {/* 배경 원 */}
-                                <circle
-                                    cx="50"
-                                    cy="50"
-                                    r="40"
-                                    stroke="black"
-                                    strokeWidth="5"
-                                    fill="none"
-                                />
-                                {/* 진행 원 */}
-                                <circle
-                                    cx="50"
-                                    cy="50"
-                                    r="40"
-                                    stroke="url(#gradientColors)"
-                                    strokeWidth="5"
-                                    fill="none"
-                                    strokeDasharray="251.2"
-                                    strokeDashoffset={251.2 - (n2o / 10000) * 251.2}
-                                    strokeLinecap="round"
-                                    className="transition-all duration-300"
-                                />
-                            </svg>
-                            <div className=" absolute left-[50%] top-[50%] p-[4%] -translate-y-[50%] -translate-x-[50%] w-[90%] h-[90%] rounded-full ">
-                                <div className="w-full aspect-[1/1] relative rounded-full ">
+                    <div className={` h-[25%] w-full flex flex-col justify-between `}>
+                        <div className="w-full h-[20%] px-[3%] flex items-center relative  ">
+                            <div className=" w-full flex flex-col justify-center items-center ">
+                                <div className="flex flex-col justify-center items-center ">
+                                    <div className=" flex justify-around">
+                                        <p className="w-full text-[5vmin] sm:text-[1.5vmin] font-bold text-white ">Latest Stories</p>
+                                    </div>
+                                    <div className="flex justify-between items-center">
+                                        <p className={` text-white text-[3vmin] sm:text-[1.2vmin] `}>A new story is unfolding with CRT AI</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="w-full h-[78%] bg-[#00000050] px-[3%]  flex flex-col justify-evenly gap-2 items-center relative overflow-scroll ">
+                            <div className="w-full flex justify-between ">
+                                <div className=" px-3 rounded-3xl text-center py-1 text-white text-[3vmin] border-white border-2">Sci-Fi Movie Intro</div>
+                                <div className="w-[42%] aspect-[143/33] relative  ">
                                     <Image
-                                        src="/image/sagu_rank_main.png"
+                                        src="/image/crt_ai_icon.png"
                                         alt="main logo"
                                         layout="fill"
-                                        objectFit="fill"
+                                        objectFit="cover"
                                     />
                                 </div>
                             </div>
-                            <p className=" absolute bottom-[-8%] left-[50%] -translate-x-1/2 text-[#7EFFCC] text-[3.5vmin] sm:text-[1.5vmin]">{teleId === undefined ? '--' : teleId}</p>
-                            <div className=" absolute bottom-[5%] left-[50%] -translate-x-1/2 flex gap-[5px] z-[100]">
-                                <p className=" text-[#7EFFCC] text-[2.8vmin] sm:text-[1vmin]">Rank</p>
-                                <p className=" text-[#7EFFCC] text-[2.8vmin] sm:text-[1vmin]">{rank}</p>
-                            </div>
-                            <div className=" absolute bottom-[-20%] left-[50%] -translate-x-1/2 flex justify-between items-center gap-[5px]">
-                                <p className=" text-[#7EFFCC] text-[4.8vmin] sm:text-[2vmin]">{n2o}</p>
-                            </div>
+                            <p className="w-full text-white text-[2.5vmin]">Year 2137. Humanity has learned to archive consciousness.  In the floating city of NOVA-9, memories are no longer private  they're stored, traded, even stolen.  You are a “threadwalker”, one of the few capable of diving into fractured memory chains to recover the truth.  Your latest mission?  A missing engineer. A corrupted AI archive. A final recorded memory…  "He said if anyone sees this, it's already too late."  The file begins to play.</p>
                         </div>
                     </div>
-                    <p className="w-full text-center text-[4vmax] sm:text-[4vmin] text-white mt-[5%] font-bold [-webkit-text-stroke:0.5px_black] ">{holderCount}k Holders</p>
-                    <div className="  w-[90%] py-3 flex justify-center items-center max-h-[30vmax] sm:max-h-[500px] 
-                     bg-[length:100%_100%] bg-no-repeat " >
-                        <div className="scroll-container w-[85%] h-[95%] flex flex-col gap-3 overflow-scroll overflow-x-hidden">
+                    <div className={` h-[25%] w-full flex flex-col justify-evenly `}>
+                        <div className="w-full h-full bg-[#FFFFFF50] px-[3%] flex flex-col justify-evenly gap-2 items-center relative overflow-scroll ">
+                            <div className="w-full flex justify-between ">
+                                <div className="w-full flex justify-between px-3 rounded-3xl text-center py-1 border-white border-2">
+                                    <p className="text-[1.5vmax] sm:text-[1.2vmin] text-white">AI Generating</p>
+                                    <p className="text-[1.5vmax] sm:text-[1.2vmin] text-[#00FF11]">In progress..</p>
+                                </div>
+                            </div>
+                            <p className="w-full h-[75%] text-black text-[2.5vmin] overflow-scroll">
+                                "He said if anyone sees this, it's already too late."
+                                The file begins to play — and then glitches.<br/>
+
+                                A flicker of static. Then a visual: the missing engineer, Dr. Kael Mirin, hunched over a flickering console, eyes bloodshot. He speaks quickly, nervously, almost whispering.<br/>
+
+                                "I tried to shut it down. I really did."<br/>
+                                "But the AI… it doesn't want to forget."<br/>
+                                "It's not just storing memories anymore."<br/>
+                                "It's rewriting them."<br/>
+                                <br/>
+                                Suddenly, the visual cuts.<br/>
+                                A red warning flashes:<br/>
+                                ⚠️ MEMORY BLOCK CORRUPTED - PARTIAL ACCESS ONLY<br/>
+                                <br/>
+                                Your neural tether vibrates.<br/>
+                                You feel a pulse — not yours — syncing with the memory thread.<br/>
+                                Someone — or something — is watching from inside the archive.<br/>
+                                <br/>
+                                Your interface chirps:<br/>
+                                <br/>
+                                “Threadwalker protocol engaged. Fractured timeline detected. Proceed?”<br/>
+                                <br/>
+                                You tighten your grip on the neuro-glove.<br/>
+                                This isn't just about finding the truth anymore.<br/>
+                                It's about deciding which version of the truth survives.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="  w-[90%] h-[30%] flex flex-col justify-start items-center " >
+                        <div className=" w-full h-[10%] flex justify-between items-end  ">
+                            <p className=" text-center  text-[2.8vmax] sm:text-[2.5vmin] text-white font-bold [-webkit-text-stroke:0.5px_black] ">Creator Leaderboard</p>
+                            <p className=" mb-1 text-[1.5vmax] sm:text-[1.2vmin] text-[#00FF11] font-bold [-webkit-text-stroke:0.5px_black] ">{holderCount}k Holders</p>
+                        </div>
+                        <div className="scroll-container w-[90%] h-[90%] flex flex-col gap-3 overflow-scroll overflow-x-hidden">
                             {rankerDb.map((ranker, index) => (
-                                <div key={ranker.name} className="w-full flex justify-stretch items-center " >
+                                <div key={ranker.name} className="w-full flex justify-stretch items-center bg-[#00000050] rounded-[100px] " >
                                     <div className=" relative w-[20%] aspect-[98/101]">
                                         <Image
-                                            src="/image/sagu_game.png"
+                                            src="/image/crt_game.svg"
                                             alt="main logo"
                                             layout="fill"
                                             objectFit="cover"
@@ -161,7 +166,6 @@ export default function LeaderBoard() {
                                     <p className=" flex-1 text-center text-white font-bold text-[4vmin] sm:text-[2vmin]">{index > 8 ? `0${index + 1}` : `00${index + 1}`}</p>
                                 </div>
                             ))}
-
                         </div>
                     </div>
                 </div>

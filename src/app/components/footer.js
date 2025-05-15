@@ -82,7 +82,7 @@ export default function Footer() {
                     <Link href="/invite" onClick={() => changeMenuColor(2)} className={`${menuColor === 2 ? 'bg-[#E55E00]' : 'bg-footerIconBg'}  w-[13%] aspect-[1/1] rounded-full flex justify-center items-center`}>
                         <div className="w-[6vmin] sm:w-[2vmin] aspect-[22/22] relative active:scale-90 transition-transform duration-200">
                             <Image
-                                src="/image/crt_invite.svg"
+                                src="/image/crt_rank.svg"
                                 alt="meatIcon"
                                 fill
                                 style={{ objectFit: "cover" }}
@@ -94,7 +94,7 @@ export default function Footer() {
                     <Link href="/leaderboard" onClick={() => changeMenuColor(3)} className={`${menuColor === 3 ? 'bg-[#E55E00]' : 'bg-footerIconBg'}  w-[13%] aspect-[1/1] rounded-full flex justify-center items-center`}>
                         <div className="w-[6vmin] sm:w-[2vmin] aspect-[22/22] relative active:scale-90 transition-transform duration-200">
                             <Image
-                                src="/image/crt_rank.svg"
+                                src="/image/crt_invite.svg"
                                 alt="meatIcon"
                                 fill
                                 style={{ objectFit: "cover" }}
